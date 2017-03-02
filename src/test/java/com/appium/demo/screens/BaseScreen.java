@@ -29,6 +29,7 @@ public class BaseScreen {
     public MobileElement waitForElementPresent(By by){
         WebDriverWait wait = new WebDriverWait(driver, appConfig.getIntegerProperty(AppConfig.PROPERTY_EXPLICIT_WAIT));
         MobileElement element = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(by));
+
         return element;
     }
 
