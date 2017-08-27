@@ -47,31 +47,27 @@ public class BaseScreen {
 
         switch(swipeDirection){
             case LEFT:
-                int xPressed = element.getSize().width - 20;
+                int xPressed = element.getSize().width - 40;
                 int yPressed1 = element.getSize().height / 2;
-                touchAction.press(xPressed, yPressed1)
-                        .moveTo(element, endPosition, yPressed1)
-                        .release()
-                        .perform();
+                touchAction.press(xPressed, yPressed1).moveTo(element, endPosition, yPressed1).perform();
+                Thread.sleep(200);
+                touchAction.release().perform();
                 break;
             case RIGHT:
-                touchAction.press(elementX + 20, elementY + 20)
-                        .moveTo(element, elementX + endPosition, elementY)
-                        .release()
-                        .perform();
+                touchAction.press(elementX + 20, elementY + 20).moveTo(element, elementX + endPosition, elementY).perform();
+                Thread.sleep(200);
+                touchAction.release().perform();
                 break;
             case TOP:
-                int yPressed = element.getSize().height - endPosition;
-                touchAction.press(elementX + 100, yPressed)
-                        .moveTo(element, elementX, endPosition)
-                        .release()
-                        .perform();
+                int yPressed = element.getSize().height - 40;
+                touchAction.press(elementX + 100, yPressed).moveTo(element, elementX, endPosition).perform();
+                Thread.sleep(200);
+                touchAction.release().perform();
                 break;
             case BOTTOM:
-                touchAction.press(elementX + 20, elementY + 20)
-                        .moveTo(element, elementX, elementY + endPosition)
-                        .release()
-                        .perform();
+                touchAction.press(elementX + 20, elementY + 20).moveTo(element, elementX, elementY + endPosition).perform();
+                Thread.sleep(200);
+                touchAction.release().perform();
                 break;
         }
 

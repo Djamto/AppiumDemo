@@ -33,6 +33,6 @@ public class HomeScreen extends BaseScreen{
     }
 
     public void scrollDownTheMenu() throws InterruptedException {
-        swipe(By.xpath("//android.widget.ListView"), SwipeDirection.TOP, 50);
+        swipe(By.xpath("//android.widget.ListView"), SwipeDirection.TOP, 40);
     }
 }

@@ -10,8 +10,8 @@ public class SocialWizard extends BaseScreen{
 
     public void scrollTheWizardToTheEnd() throws InterruptedException {
         for(int i = 1; i <= 2; i++){
-            swipe(By.xpath("//android.support.v4.view.ViewPager"), SwipeDirection.LEFT, 50);
-            Thread.sleep(500);
+            swipe(By.xpath("//android.support.v4.view.ViewPager"), SwipeDirection.LEFT, 40);
+            Thread.sleep(900);
         }
     }
 
